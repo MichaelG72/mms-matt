@@ -3,11 +3,11 @@ import datetime
 
 
 def handler(event, context):
-    data = {
+    """data = {
         'output': 'Hello World',
         'timestamp': datetime.datetime.utcnow().isoformat(),
         'Test': 'Trying to write. Does it work?'
-    }
+    }"""
     return {'statusCode': 200,
-            'body': json.dumps(data),
+            'body': json.dumps(event),
             'headers': {'Content-Type': 'application/json'}}
